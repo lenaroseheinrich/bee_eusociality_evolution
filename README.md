@@ -1,17 +1,15 @@
 # Evolution of eusociality in bees
-
-## Ancestral state reconstruction ('01_eusociality_asr.R')
 This repository contains code to reconstruct the evolutionary history of eusociality across bees using corHMM. 
 
-First, we fit models of trait evolution, compare them using AIC to identify the best-supported model, and then map ancestral sociality states across a phylogeny of ~4,586 species. Next, we extract transition rate estimates (i.e. number of transitions to/from eusociality per million year), and visualize the distribution of eusociality across the tree.
+## Ancestral state reconstruction ('01_eusociality_asr.R')
+First, we fit models of trait evolution, compare them using AIC to identify the best-supported model, and then map ancestral sociality states across a phylogeny of ~4,586 bee species. Next, we extract transition rate estimates (i.e. number of transitions to/from eusociality per million year), and visualize the distribution of eusociality across the tree.
 
-Two alternative runs are done to assess how uncertainty in trait scoring for one particularly variable and poorly studied clade, _Lasioglossum_, impacts the results:
+Two alternative runs are done to assess how uncertainty in trait scoring for one particularly variable clade, _Lasioglossum_, impacts the results:
 - **Run 1:** Unknown *Lasioglossum* states manually scored as primitively eusocial  
 - **Run 2:** Unknown *Lasioglossum* left as missing and inferred during model fitting
 
 ## Stochastic character mapping ('02_corHMM_simmaps.R')
-
-This script uses the best-fitting model identified above and its estimated transition rates to perform many simulations of possible evolutionary histories across the tree (stochastic character mapping). It then summarizes how often transitions occur on average across these simulated evolutionary histories in order to understand how often and when gains and losses of eusociality are likely to have occurred across the bee phylogeny.
+This script uses the best-fitting model identified above and its estimated transition rates to perform many simulations of possible evolutionary histories of eusociality across the tree. It then summarizes how often transitions occur on average across these simulated evolutionary histories in order to understand how often and when gains and losses of eusociality are likely to have occurred.
 
 ## Data inputs
 
@@ -34,7 +32,7 @@ Located in `results/`:
   Model comparison tables summarizing all tested models, their AICc values, and relative support.
 
 - `transition_rates_corHMM_run1.csv` / `transition_rates_corHMM_run2.csv`  
-  Estimated transition rate matrices from the best-supported model ( = transitions among eusociality states per million years).
+  Estimated transition rate matrices from the best-supported model (rate = transitions among eusociality states per million years).
 
 ### Ancestral state reconstructions
 - `corhmm_dredge_recon_final_run1.pdf` / `corhmm_dredge_recon_final_run2.pdf`  
@@ -45,9 +43,9 @@ Located in `results/`:
 
 ### Stochastic character mapping (SIMMAP)
 - `transitions_summary_corhmm_run1.csv` / `transitions_summary_corhmm_run2.csv`  
-  Summary tables reporting the mean and variance in the number of transitions among sociality states across simulated evolutionary histories.
+  Summary tables reporting the mean and variance in the number of transitions among eusociality states across simulated evolutionary histories.
 
 - `transitions_summary_plot_run1.pdf` / `transitions_summary_plot_run2.pdf`  
-  Figures visualizing the distribution of transition counts (i.e., how frequently gains and losses of eusociality are estimated to occur and how long ago they happened).
+  Figures visualizing the distribution of transition counts (i.e., how many gains and losses of eusociality are estimated to have occurred and how long ago they happened).
 
 
