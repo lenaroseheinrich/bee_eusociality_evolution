@@ -2,7 +2,7 @@
 This repository contains code to reconstruct the evolutionary history of eusociality across bees using corHMM. 
 
 ## Ancestral state reconstruction ('01_eusociality_asr.R')
-First, we fit models of trait evolution, compare them using AIC to identify the best-supported model, and then map ancestral sociality states across a phylogeny of ~4,586 bee species. Next, we extract transition rate estimates (i.e. number of transitions to/from eusociality per million year), and visualize the distribution of eusociality across the tree.
+First, we fit models of trait evolution, compare them using AIC to identify the best-supported model, and extract transition rate estimates (i.e. number of transitions to/from eusociality per million year) from the best model. In this case, the best model was a model with two rate-classes, meaning the rate at which eusociality evolved across the tree was variable, with some fast and some slow clades. Next, we reconstruct ancestral eusociality states across the phylogeny and plot the ancestral state reconstruction across the tree.
 
 Two alternative runs are done to assess how uncertainty in trait scoring for one particularly variable clade, _Lasioglossum_, impacts the results:
 - **Run 1:** Unknown *Lasioglossum* states manually scored as primitively eusocial  
