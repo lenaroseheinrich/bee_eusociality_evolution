@@ -9,7 +9,7 @@ Two alternative runs were done to assess how uncertainty in trait scoring for on
 - **Run 2:** Unknown *Lasioglossum* left as unknowns and inferred during model fitting
 
 ## Stochastic character mapping ('02_corHMM_simmaps.R')
-This script uses the best-fitting model identified above and its estimated transition rates to perform many simulations of possible evolutionary histories of eusociality across the tree. It then summarizes how many transitions occur on average across these simulated evolutionary histories in order to understand how often and when gains and losses of eusociality are likely to have occurred.
+This script uses the best-fitting model identified above and its estimated transition rates to perform many simulations of possible evolutionary histories of eusociality across the tree. It then summarizes how many transitions occur on average across these simulated evolutionary histories in order to understand how often and when gains and losses of eusociality are likely to have occurred while still reflecting the uncertainty inherent to these inferences.
 
 ## Data inputs
 
